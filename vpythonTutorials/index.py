@@ -1,16 +1,15 @@
-from room import *
-from ball import *
-from vpython import vector
+from room import Room
+from ball import Ball
+from vpython import vector,color
 
 
 
 
 myRoom = Room(color.white, 10, 10, 10,1)
-myRoom.show()
 myMarble = Ball(color.green, 0.5)
-myMarble.show()
-movement=vector(0.02,0.06,0.03)
-myMarble.move(myRoom,movement,False,True)
+myMarble.moveVector=vector(0.1,0.12,0.2)
+myRoom.addBalls(myMarble)
+myRoom.animate();
 # myMarble.multiply(myRoom,movement)
 
 
